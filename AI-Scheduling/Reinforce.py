@@ -29,7 +29,7 @@ class RLTaskScheduler:
             min_non_physical_workers = np.random.randint(5, 15)  # Varies per day
             work_remaining = total_work  # Total work to be completed in the day
             for _ in range(num_workers):
-                fatigue_level = np.random.uniform(0.8, 1)  # Start with random energy
+                fatigue_level = np.random.uniform(0.5, 1)  # Start with random energy
                 biomechanical_state = np.random.choice(["optimal", "normal", "decayed"])
 
                 workers_remaining = np.random.randint(min_non_physical_workers, num_workers)

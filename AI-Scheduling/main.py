@@ -137,6 +137,8 @@ def compute_efficiency(simulation_results, total_work_assigned=3000):
         # Maximum possible alarms (all tasks triggering all alarms every hour)
 
         alarm_efficiency = 100 - (total_alarms / max_possible_alarms * 100)
+        if alarm_efficiency < 0 :
+            alarm_efficiency = 0
 
         # Overall Efficiency Score (OES)
         overall_efficiency = ((work_efficiency + fatigue_efficiency) / 2) - ((total_alarms / max_possible_alarms) * 100)
@@ -452,7 +454,7 @@ def main_statistical_analysis():
 
 if __name__ == '__main__':
     # main_test()
-    # main_rl(train=False)
+    # main_rl(train=True)
     # main_compare()
     main_statistical_analysis()
 
