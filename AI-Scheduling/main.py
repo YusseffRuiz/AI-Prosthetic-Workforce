@@ -323,10 +323,9 @@ def plot_efficiency_statistical_metrics(stats):
     ax.set_xticklabels(categories, rotation=15)
     ax.legend()
     ax.grid(axis='y', linestyle="--", alpha=0.7)
-
-    plt.show()
     image_path = os.path.join(save_folder, "Statistical_EfficiencyMetrics.png")
     plt.savefig(image_path)
+    plt.show()
 
 
 def compare_ai_performance(stats):
@@ -453,9 +452,9 @@ def main_statistical_analysis():
 
 if __name__ == '__main__':
     # main_test()
-    main_rl(train=False)
+    # main_rl(train=False)
     # main_compare()
-    # main_statistical_analysis()
+    main_statistical_analysis()
 
 
 

@@ -94,7 +94,7 @@ class RLTaskScheduler:
     def load_trained_model(self):
         """ Load trained RL model weights """
         try:
-            with open("rl_task_scheduler.pkl", "rb") as f:
+            with open("AI-Scheduling/rl_task_scheduler.pkl", "rb") as f:
                 self.q_table = pickle.load(f)
             print("✅ Pre-trained model loaded successfully!")
         except FileNotFoundError:
